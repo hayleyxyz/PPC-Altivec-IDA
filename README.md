@@ -1,3 +1,5 @@
+
+
 # PowerPC Altivec/VMX Extension Module
 
 The PowerPC processor module in IDA Pro does not handle Altivec/VMX instructions. Many
@@ -14,10 +16,45 @@ you can disable/re-enable the plugin by using the entry in the Edit/Plugins menu
 the plugin to be disabled on load, you will have to edit this source code. Change the value of
 g_HookState to 'kDisabled' and rebuild.
 
-NOTES
------
-The versions of ppc.w32 and ppc64.w64 that were in initial distributions of IDA Pro 4.8 contain
-a flaw that will trigger an illegal read of memory when used with this extension. If you happen
-to encounter crashes in these modules, I would recommend that you contact Data Rescue,
-specifically Ilfak Guilfanov - ig@datarescue.com - to obtaining corrected versions of these
-modules, as I did.
+COMPILING
+------------
+
+## Windows
+On Windows, you should be able to open the solution and compile, provided you have the idasdk70 folder inside C:\Program Files\IDA 7.0.
+
+## macOS / Linux
+Place the project folder inside idasdk70/plugins. cd to idasdk70 then run make:
+
+Run
+`$ make -C plugins/ppcaltivec __EA64__=1 __MAC__=1 NDEBUG=1`
+
+Change \_\_MAC\_\_ to \_\_LINUX\_\_ if applicable.
+
+The output binary will be in idasdk70/bin/plugins
+
+CHANGELOG
+------------
+#### 27.03.05 - Dean - V1.0
+* Created
+
+#### 14.05.05 - Dean - V1.1
+* Correction to operand register number extraction.
+* Correction to operand order for vmaddfp.
+* Now handles initial analysis without any additional hassle.
+* Added support for Altivec opcodes with 4 parameters.
+
+#### 22.05.05 - Dean - V1.2
+* Added support for auto comments.
+
+#### 26.09.05 - Dean - V1.3
+* Support for IDA Pro 4.9
+
+#### 07.12.10 - xorloser - V1.8
+* Support for Gekko instructions merged from the Gekko extension module created by HyperIris.
+* Also incldued support for SPRG names for PS3 as added by Tridentsx.
+
+#### 2018-03-12  yui-konnu   V1.9
+* Support for IDA 7. Added SPRG descriptions to auto-comments.
+
+#### 2018-04-03  yui-konnu   V1.9.1
+* Added Linux/macOS build methods.
