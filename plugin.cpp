@@ -49,7 +49,7 @@
 *									extension module created by HyperIris. Also incldued
 *									support for SPRG names for PS3 as added by Tridentsx.
 *
-*   2018-03-12  yui-konnu   V1.9    Support for IDA 7. Added SPRG descriptions to auto-comments.
+*	2018-03-12  yui-konnu   V1.9    Support for IDA 7. Added SPRG descriptions to auto-comments.
 *
 ***************************************************************************************************/
 
