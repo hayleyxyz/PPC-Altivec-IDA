@@ -10,7 +10,7 @@ support for the Altivec instruction set.
 
 INSTALLATION
 ------------
-Place the two processor extension module ppcaltivec64.dll (currently only 64-bit IDA is supported)
+Place the appropriate processor extension module ppcaltivec64.(dll/so/dylib) (currently only 64-bit IDA has been compiled for)
 within your IDA Pro 'plugins' directory. By default the plugin is active when dealing with PPC code, but
 you can disable/re-enable the plugin by using the entry in the Edit/Plugins menu. If you want
 the plugin to be disabled on load, you will have to edit this source code. Change the value of
