@@ -34,10 +34,11 @@ The output binary will be in idasdk70/bin/plugins
 
 ## cmake
 You may also use CMake
-`$ mkdir PPC-Altivec-IDA/cmake-build`
-`$ cd `
-`$ cmake -D IDASDK:string="/Applications/IDA Pro 7.0/idasdk70" ..`
-`$ make`
+
+`$ mkdir PPC-Altivec-IDA/cmake-build`  
+`$ cd PPC-Altivec-IDA/cmake-build`  
+`$ cmake -D IDASDK:string="/Applications/IDA Pro 7.0/idasdk70" ..`  
+`$ make`  
 
 Replace IDASDK variable with path to the IDA SDK on your system.
 
@@ -68,3 +69,6 @@ CHANGELOG
 
 #### 03.04.18  yui-konnu   V1.9.1
 * Added Linux/macOS build methods.
+
+#### 08.06.18  yui-konnu   V1.9.1
+* Added CMake build file.
