@@ -32,6 +32,16 @@ Change \_\_MAC\_\_ to \_\_LINUX\_\_ if applicable.
 
 The output binary will be in idasdk70/bin/plugins
 
+## cmake
+You may also use CMake
+`$ mkdir PPC-Altivec-IDA/cmake-build`
+`$ cd `
+`$ cmake -D IDASDK:string="/Applications/IDA Pro 7.0/idasdk70" ..`
+`$ make`
+
+Replace IDASDK variable with path to the IDA SDK on your system.
+
+
 CHANGELOG
 ------------
 #### 27.03.05 - Dean - V1.0
@@ -53,8 +63,8 @@ CHANGELOG
 * Support for Gekko instructions merged from the Gekko extension module created by HyperIris.
 * Also incldued support for SPRG names for PS3 as added by Tridentsx.
 
-#### 2018-03-12  yui-konnu   V1.9
+#### 12.03.18  yui-konnu   V1.9
 * Support for IDA 7. Added SPRG descriptions to auto-comments.
 
-#### 2018-04-03  yui-konnu   V1.9.1
+#### 03.04.18  yui-konnu   V1.9.1
 * Added Linux/macOS build methods.
