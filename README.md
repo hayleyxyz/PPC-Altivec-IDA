@@ -1,3 +1,6 @@
+# This project is no longer needed
+
+As of (at least) IDA 9, support for AltiVec, VMX128 extensions has been added.
 
 
 # PowerPC Altivec/VMX Extension Module
